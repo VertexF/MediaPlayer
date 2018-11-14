@@ -1,0 +1,53 @@
+
+.button
+{
+    -fx-background-color: transparent;
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#openFile
+{
+    -fx-background-image: url("../Images/OpenFile.png");
+}
+
+#play
+{
+    -fx-background-image: url("../Images/play.png");
+}
+
+#pause
+{
+    -fx-background-image: url("../Images/Pause.png");
+}
+
+#stop
+{
+    -fx-background-image: url("../Images/Stop.png");
+}
+
+#rrewind
+{
+    -fx-background-image: url("../Images/RRewind.png");
+}
+
+#rewind
+{
+    -fx-background-image: url("../Images/Rewind.png");
+}
+
+#faster
+{
+    -fx-background-image: url("../Images/Faster.png");
+}
+
+#ffaster
+{
+    -fx-background-image: url("../Images/FFaster.png");
+}
+
+#exit
+{
+    -fx-background-image: url("../Images/Exit.png");
+}
