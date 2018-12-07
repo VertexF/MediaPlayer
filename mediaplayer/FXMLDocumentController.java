@@ -19,6 +19,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
@@ -72,13 +73,17 @@ public class FXMLDocumentController implements Initializable {
                     }
                     
                 });
-
+                
                 mediaPlayer.currentTimeProperty().addListener(new ChangeListener<Duration>() {
                     @Override
                     public void changed(ObservableValue<? extends Duration> observable, Duration oldValue, Duration newValue) {
                         sliderVideo.setValue(newValue.toSeconds());
+                        //TODO: Fix this so it's not always being set every 5 seconds.
+                        sliderVideo.setMax(mediaPlayer.getTotalDuration().toSeconds());
                     }
                 });
+                
+                //System.out.println(mediaPlayer.getTotalDuration().toSeconds());
                 
                 sliderVideo.setOnMouseClicked(new EventHandler<MouseEvent>() {
                     @Override
